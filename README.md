@@ -28,7 +28,45 @@ R Packages:
 3. Pheatmap – Heatmaps of DEGs.
 4. clusterProfiler – Gene Ontology (GO) enrichment.
 
-All scripts contain commentary on each step and parameters used. 
+
+## Project Outline:
+All scripts contain commentary on each step and parameters used, and all scripts are in numbered order. 
+
+01_getsamplelist.sh
+
+02_a_fastqc.sh
+
+02_b_multiqc.sh
+
+02_c_fastp.sh (OPTIONAL: to run fastp)
+
+02_d_rerun_after_fastp.sh (OPTIONAL: to fastQC after fastp)
+
+03_a_get_ref_genome.sh
+
+03_b_hisat_index.sh
+
+03_c_mapping.sh
+
+03_ca_summaries.sh (OPTIONAL: to get summary alignment rate for all samples)
+
+03_cb_multiqc_mapping.sh (OPTIONAL: to run multiQC on the mapping)
+
+03_d_samtobam.sh
+
+03_e_samtools_sort.sh
+
+03_f_samtools_index.sh
+
+04_a_individual_featureCounts.sh (OPTIONAL: to run featureCounts on individual samples)
+
+04_b_featurecountsMultiQC.sh (OPTIONAL: to run MultiQC on featureCounts)
+
+04_c_featurecount_all_samples.sh
+
+04_d_Modify_featurecounts_table.sh 
+
+05_06_DESeq_analysis.r
 
 ## Reference
 Eswaran J, et al. Transcriptomic landscape of breast cancers through mRNA sequencing. Sci Rep 2, 264 (2012). https://doi.org/10.1038/srep00264
